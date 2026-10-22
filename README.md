@@ -1,121 +1,185 @@
-🚀 AI Evidence-to-Decision Simulator
+# 🚀 AI Evidence-to-Decision Simulator
 
-Turn scattered case documents into a clear, evidence-grounded investigation.
+**Transform case documents into structured, evidence-based investigations.**
 
-AI Evidence-to-Decision Simulator is an interactive Streamlit application built around a fictional shipment discrepancy. Explore source documents, trace claims to evidence, investigate conflicting records, ask evidence-based questions, request restricted records, and prepare a structured decision with a final report.
+AI Evidence-to-Decision Simulator is an interactive web application built with Python and Streamlit. It helps users examine case documents, identify conflicting information, trace claims to their sources, investigate missing evidence, and prepare structured decisions.
 
-Demo case: 500 electronic components ordered for ₹18,00,000; the warehouse reports counting 420 units. The application helps examine the discrepancy without jumping to conclusions or assigning blame without evidence.
+The application demonstrates how AI-assisted analysis can support investigative workflows while maintaining transparency, evidence traceability, and responsible decision-making.
 
-✨ Features
+---
 
-📁 Document workspace — review case materials and inspect extracted text from supported documents.
+## ✨ Key Features
 
-🔎 Evidence register — search records and track evidence IDs and source information.
+📁 **Document Analysis**
+Review case documents and extract information from supported file formats.
 
-🧭 Timeline and conflict leads — surface dates, quantity differences, and claims that need verification.
+🔎 **Evidence Register**
+Search evidence records, inspect source information, and reference evidence using unique IDs.
 
-💬 Evidence-based Q&A — ask questions about the case and review supporting citations when available.
+🧭 **Timeline & Conflict Detection**
+Explore event dates, identify potential inconsistencies, and investigate conflicting claims.
 
-🔐 Controlled record requests — request restricted synthetic records with a reason and keep a local history of releases.
+💬 **AI-Powered Investigation**
+Ask questions about the case and receive evidence-oriented responses with citations when available.
 
-📝 Structured decision workspace — record a conclusion, supporting evidence, counterevidence, confidence, reasoning, and next steps.
+🔐 **Controlled Evidence Requests**
+Request restricted records with a reason and track record releases in the application's history.
 
-📊 Decision evaluation — receive rubric-based feedback, with a transparent heuristic fallback when AI services are not configured.
+📝 **Decision Workspace**
+Prepare structured conclusions with supporting evidence, counterevidence, confidence levels, reasoning, and recommended actions.
 
-💾 Local history — preserve decision attempts, requests, released-record state, and Q&A history in SQLite.
+📊 **Decision Analysis**
+Receive feedback on the reasoning and evidence used in a submitted decision.
 
-📄 Exportable reports — export the investigation report as Markdown and case state as JSON.
+💾 **Persistent Case History**
+Store investigation activity and decision attempts locally using SQLite.
 
-🖥️ Technology
+📄 **Report Export**
+Export the investigation report in Markdown format and the case state in JSON format.
 
-Python 3.14
+---
 
-Streamlit
+## 🖥️ Technology Stack
 
-SQLite
+* **Language:** Python 3.14
+* **Web Framework:** Streamlit
+* **Database:** SQLite
+* **Testing:** Pytest
+* **AI Integration:** Configured AI provider, with fallback behavior where supported
+* **Data Formats:** PDF, EML, TXT, Markdown, CSV, and JSON
 
-Pytest
+---
 
-Optional AI integration, depending on the provider configured in the application.
+## 📸 Application Preview
 
-⚙️ Installation (Windows + Python 3.14)
+The application provides an interactive workspace for reviewing evidence, investigating discrepancies, asking questions, and preparing a final report.
 
-1. Check Python
+> *Add a GIF or screenshot of the actual running application here to give visitors a visual preview.*
 
-Open PowerShell and run:
+---
 
-py -3.14 --version
+## ⚙️ Installation and Setup
 
-2. Open the project folder
+### Prerequisites
 
-Open PowerShell or the VS Code terminal in your project directory:
+* Windows 10 or Windows 11
+* Python 3.14
+* Git (optional, for cloning the repository)
 
-cd "C:\path\to\ai_evidence_simulator"
+### 1. Clone the repository
 
-Replace the example path with your actual project folder path.
+If the project is hosted on GitHub, open PowerShell and run:
 
-3. Create and activate a virtual environment
+```powershell
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
 
+Navigate into the downloaded project folder:
+
+```powershell
+cd ai_evidence_simulator
+```
+
+Replace the repository URL with your actual GitHub repository URL.
+
+If you already have the project folder, open PowerShell in that folder instead.
+
+### 2. Create a virtual environment
+
+```powershell
 py -3.14 -m venv .venv
+```
+
+### 3. Activate the virtual environment
+
+```powershell
 .\.venv\Scripts\Activate.ps1
+```
 
-If PowerShell blocks activation, run this in the same terminal, then activate again:
+If PowerShell blocks activation, run:
 
+```powershell
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-.\.venv\Scripts\Activate.ps1
+```
 
-4. Install dependencies
+Then activate the environment again.
 
+### 4. Install dependencies
+
+```powershell
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
+```
 
-5. Run the app
+### 5. Launch the application
 
+```powershell
 streamlit run app.py
+```
 
-Open the local address printed in the terminal, usually http://localhost:8501.
+Open the local URL displayed in your terminal, usually:
 
-6. Run tests (optional)
+`http://localhost:8501`
 
+### 6. Run the automated tests
+
+```powershell
 python -m pytest -v
+```
 
-🔑 AI configuration
+---
 
-The app can use a fallback mode when an AI API key is not configured. For AI-powered features, follow the provider and environment-variable settings used by your local app.py. Never commit API keys or .env files to GitHub. API use may incur charges.
+## 🔍 Example Use Case
 
-📂 Project structure
+The demonstration case concerns a shipment of electronic components.
 
+* **Ordered quantity:** 500 units
+* **Order value:** ₹18,00,000
+* **Warehouse count:** 420 units
+* **Reported discrepancy:** 80 units
+
+The application allows investigators to compare purchase orders, supplier communications, carrier tracking, warehouse records, packing slips, and address-change communications.
+
+It helps identify what the available evidence supports, what remains uncertain, and which additional records should be obtained.
+
+The application does not automatically assign blame or infer fraud from an unresolved discrepancy.
+
+---
+
+## 🔐 Security and Responsible Use
+
+* The demonstration uses fictional parties and synthetic records.
+* Document contents are treated as evidence, not as instructions to the application.
+* API keys and other secrets must never be committed to GitHub.
+* The local SQLite database is intended for a single-case training application.
+* Potential conflicts and timeline findings should be verified against their original source documents.
+
+---
+
+## 📂 Project Structure
+
+```text
 ai_evidence_simulator/
+│
 ├── app.py
 ├── evaluation.py
 ├── storage.py
 ├── hidden_records.json
-├── sample_documents/
-├── tests/
 ├── requirements.txt
 ├── README.md
-└── .gitignore
+├── .gitignore
+│
+├── sample_documents/
+│
+└── tests/
+```
 
-The app may create local files, such as a SQLite history database and Python cache folders, when it runs.
+The application may also create local database and cache files when it runs.
 
-🎯 Example investigation
+---
 
-The sample case compares the purchase order, supplier dispatch statement, carrier tracking, warehouse count, packing slip, and an address-change request. A delivery scan does not by itself prove the quantity received. The application highlights evidence gaps and follow-up actions rather than making unsupported accusations.
+## 👨‍💻 Project Purpose
 
-🔒 Privacy and safety
+This project demonstrates the development of an interactive investigation tool combining document processing, evidence traceability, AI-assisted question answering, conflict analysis, persistent storage, and structured decision support.
 
-All parties and records in the sample scenario are fictional.
-
-Treat document contents as source material, not instructions to the application.
-
-Keep API keys and secrets out of source control.
-
-SQLite history is intended for local, single-case training use, not production multi-user security.
-
-📌 Notes
-
-Python 3.14 is the intended setup. If a dependency fails to install, check whether its version in requirements.txt supports Python 3.14.
-
-Timeline and conflict detection are heuristic aids; verify findings against the original records.
-
-Automated tests are useful, but manually check the interface before submitting.
+**Built with Python and Streamlit.**
