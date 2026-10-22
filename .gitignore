@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+case_history.sqlite3
+case_history.sqlite3-shm
+case_history.sqlite3-wal

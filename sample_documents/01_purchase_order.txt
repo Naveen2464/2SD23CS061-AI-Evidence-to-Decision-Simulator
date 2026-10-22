@@ -1,0 +1,11 @@
+SYNTHETIC PURCHASE ORDER
+Source reference: PO-8842
+Date: 2026-10-10
+Buyer: Northstar Devices Ltd. (fictional)
+Supplier: Apex Components Trading (fictional)
+Item: Electronic components, model EC-7
+Ordered quantity: 500 units
+Total order value: INR 1,800,000 (₹18,00,000)
+Ship-to address at order creation: Warehouse A, Dock 3
+Terms: Quantity is subject to receiving inspection and reconciliation.
+This synthetic document is for training only.

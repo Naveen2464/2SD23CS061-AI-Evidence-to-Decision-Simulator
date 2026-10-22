@@ -1,0 +1,30 @@
+{
+  "H-101": {
+    "title": "Carrier proof-of-delivery detail",
+    "description": "Restricted carrier delivery record including recipient field and package-count field; useful to distinguish delivery status from quantity evidence.",
+    "source": "synthetic_carrier_pod_detail.txt",
+    "kind": "txt",
+    "content": "SYNTHETIC CARRIER POD DETAIL\nRecord: POD-7714\nDelivery scan: Completed on 2026-10-14 at 16:42 local time.\nRecipient field: Initials only; identity not independently verified.\nPackage count field: blank.\nUnit quantity field: not collected by carrier.\nSignature image: unavailable in this training extract.\nInterpretation limit: this extract supports a completed delivery scan but does not establish the quantity inside the package(s)."
+  },
+  "H-102": {
+    "title": "Address-change authorization audit trail",
+    "description": "Restricted audit trail for the address-change request and approval path; useful to establish whether the change was authorized.",
+    "source": "synthetic_address_change_audit.txt",
+    "kind": "txt",
+    "content": "SYNTHETIC ADDRESS-CHANGE AUDIT TRAIL\nRequest event: 2026-10-13 09:17 local time; request entered through customer-service portal.\nRequester identity: account username shown, but no callback verification recorded in this extract.\nApproval event: no approval event appears in the supplied audit extract.\nDestination change: a different receiving location was entered before dispatch.\nInterpretation limit: absence of an approval event in this extract is not proof that approval never occurred; obtain the full audit log and account authentication details."
+  },
+  "H-103": {
+    "title": "Warehouse receiving count sheet",
+    "description": "Restricted receiving worksheet containing a reported count and an exception note; useful to validate the shortage claim.",
+    "source": "synthetic_warehouse_count.txt",
+    "kind": "txt",
+    "content": "SYNTHETIC WAREHOUSE RECEIVING COUNT SHEET\nDate: 2026-10-14\nInbound reference: IN-2048\nCount entered: 420 units\nException note: count performed after cartons were moved from receiving bay; carton seal condition not recorded.\nSecond count: not present in this extract.\nInventory posting: 420 units posted on 2026-10-14.\nInterpretation limit: the record documents a count entry of 420; verify count method, carton/package count, custody, and any later recount before treating it as definitive."
+  },
+  "H-104": {
+    "title": "Supplier packing and dispatch sheet",
+    "description": "Restricted supplier dispatch sheet stating packed quantity and package details; useful to compare supplier claim with carrier records.",
+    "source": "synthetic_supplier_dispatch.txt",
+    "kind": "txt",
+    "content": "SYNTHETIC SUPPLIER PACKING AND DISPATCH SHEET\nDispatch date: 2026-10-13\nOrder reference: PO-8842\nQuantity stated as packed: 500 units\nCartons: 10 cartons, stated as 50 units each\nCarrier handover signature: field present but not included in this extract\nRecorded gross weight: 18.4 kg\nInterpretation limit: this is a supplier-side record. Seek independent carrier handover scan/weight data and carton-level evidence to corroborate it."
+  }
+}

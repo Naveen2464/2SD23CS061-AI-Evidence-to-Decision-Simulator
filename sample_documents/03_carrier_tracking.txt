@@ -1,0 +1,10 @@
+SYNTHETIC CARRIER TRACKING EXTRACT
+Tracking reference: TRK-550218
+Shipment reference: PO-8842
+Pickup scan: 2026-10-13 15:25
+Delivery scan: 2026-10-14 16:42
+Status: Delivery completed
+Package count: not displayed in this tracking view
+Unit quantity: not displayed in this tracking view
+Recipient identity and signature: not included in this tracking view
+Interpretation limit: tracking status is not, by itself, proof that all 500 units arrived.
