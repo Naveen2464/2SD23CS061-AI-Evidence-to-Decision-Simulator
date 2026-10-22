@@ -48,13 +48,6 @@ Export the investigation report in Markdown format and the case state in JSON fo
 * **AI Integration:** Configured AI provider, with fallback behavior where supported
 * **Data Formats:** PDF, EML, TXT, Markdown, CSV, and JSON
 
----
-
-## 📸 Application Preview
-
-The application provides an interactive workspace for reviewing evidence, investigating discrepancies, asking questions, and preparing a final report.
-
-> *Add a GIF or screenshot of the actual running application here to give visitors a visual preview.*
 
 ---
 
@@ -71,7 +64,7 @@ The application provides an interactive workspace for reviewing evidence, invest
 If the project is hosted on GitHub, open PowerShell and run:
 
 ```powershell
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Naveen2464/2SD23CS061-AI-Evidence-to-Decision-Simulator.git
 ```
 
 Navigate into the downloaded project folder:
