@@ -70,7 +70,7 @@ git clone https://github.com/Naveen2464/2SD23CS061-AI-Evidence-to-Decision-Simul
 Navigate into the downloaded project folder:
 
 ```powershell
-cd ai_evidence_simulator
+cd 2SD23CS061-AI-Evidence-to-Decision-Simulator
 ```
 
 Replace the repository URL with your actual GitHub repository URL.
